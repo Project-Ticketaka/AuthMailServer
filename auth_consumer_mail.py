@@ -21,7 +21,7 @@ stream_handler.setFormatter(formatter)
 logger.addHandler(stream_handler)
 
 env = Environment(
-    loader=PackageLoader('consumer_mail', 'templates'),
+    loader=PackageLoader('auth_consumer_mail', 'templates'),
     autoescape=select_autoescape(['html', 'xml'])
 )
 
