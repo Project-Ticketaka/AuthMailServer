@@ -71,7 +71,7 @@ def on_message(to_channel, method_frame, header_frame, body):
     data = json.loads(body)
 
     logger.log(logging.DATA, data)
-    send(data['memberEmail'], data)
+    send(data['email'], data)
     to_channel.basic_ack(delivery_tag=method_frame.delivery_tag)
 
 
